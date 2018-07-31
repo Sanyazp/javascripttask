@@ -8,11 +8,6 @@ var sdacha3 = sdacha1 % 10;
 
 if (sdacha1 === 0) {
     console.log("Банкомат выдаст " + a / b + " купюр по 50 гривен");
-} else if (sdacha2 === 0) {
-    var comp = Math.floor(a / b);
-    console.log("Банкомат выдаст " + comp + " купюр по 50 гривен");
-    var ostatok = sdacha1 / c;
-    console.log("Банкомат выдаст " + ostatok + " купюр по 25 гривен");
 } else if (a < 50) {
     if (a % 25 === 0) {
         var ostatok = sdacha1 / c;
@@ -23,6 +18,11 @@ if (sdacha1 === 0) {
     } else {
         console.log("Сумма должна быть кратна 50, 25 или 10, вы ввели - " + a);
     }
+} else if (sdacha2 === 0) {
+    var comp = Math.floor(a / b);
+    console.log("Банкомат выдаст " + comp + " купюр по 50 гривен");
+    var ostatok = sdacha1 / c;
+    console.log("Банкомат выдаст " + ostatok + " купюр по 25 гривен");
 } else if (sdacha3 === 0) {
     var comp = Math.floor(a / b);
     console.log("Банкомат выдаст " + comp + " купюр по 50 гривен");
